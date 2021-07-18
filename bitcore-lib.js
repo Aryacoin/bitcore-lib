@@ -4683,20 +4683,15 @@ function removeNetwork(network) {
 addNetwork({
   name: 'livenet',
   alias: 'mainnet',
-  pubkeyhash: 0x00,
+  pubkeyhash: 0x17,
   privatekey: 0x80,
   scripthash: 0x05,
   xpubkey: 0x0488b21e,
   xprivkey: 0x0488ade4,
-  networkMagic: 0xf9beb4d9,
+  networkMagic: 0x88e1eae7,
   port: 8333,
   dnsSeeds: [
-    'seed.bitcoin.sipa.be',
-    'dnsseed.bluematt.me',
-    'dnsseed.bitcoin.dashjr.org',
-    'seed.bitcoinstats.com',
-    'seed.bitnodes.io',
-    'bitseed.xf2.org'
+    'dnsseed1.aryacoin.io'
   ]
 });
 
@@ -28426,7 +28421,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_spec": "elliptic@=6.4.0",
-  "_where": "/Users/ematiu/dev/bitcore-lib",
+  "_where": "/Users/ematiu/dev/bitcore-lib-aryacoin",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -54334,7 +54329,7 @@ exports.createContext = Script.createContext = function (context) {
 
 },{}],214:[function(require,module,exports){
 module.exports={
-  "name": "bitcore-lib",
+  "name": "bitcore-lib-aryacoin",
   "version": "0.16.0",
   "description": "A pure and powerful JavaScript Bitcoin library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -54363,7 +54358,7 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitpay/bitcore-lib.git"
+    "url": "https://github.com/Aryacoin/bitcore-lib-aryacoin.git"
   },
   "browser": {
     "request": "browser-request"
@@ -54386,7 +54381,7 @@ module.exports={
   "license": "MIT"
 }
 
-},{}],"bitcore-lib":[function(require,module,exports){
+},{}],"bitcore-lib-aryacoin":[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 
@@ -54396,9 +54391,9 @@ var bitcore = module.exports;
 bitcore.version = 'v' + require('./package.json').version;
 bitcore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of bitcore-lib found. ' +
-      'Please make sure to require bitcore-lib and check that submodules do' +
-      ' not also include their own bitcore-lib dependency.';
+    var message = 'More than one instance of bitcore-lib-aryacoin found. ' +
+      'Please make sure to require bitcore-lib-aryacoin and check that submodules do' +
+      ' not also include their own bitcore-lib-aryacoin dependency.';
     throw new Error(message);
   }
 };
