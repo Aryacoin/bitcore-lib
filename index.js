@@ -1,69 +1,69 @@
 'use strict';
 
-var bitcore = module.exports;
+var ayacore = module.exports;
 
 // module information
-bitcore.version = 'v' + require('./package.json').version;
-bitcore.versionGuard = function(version) {
+ayacore.version = 'v' + require('./package.json').version;
+ayacore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of bitcore-lib-aryacoin found. ' +
-      'Please make sure to require bitcore-lib-aryacoin and check that submodules do' +
-      ' not also include their own bitcore-lib-aryacoin dependency.';
+    var message = 'More than one instance of aryacore-lib found. ' +
+      'Please make sure to require aryacore-lib and check that submodules do' +
+      ' not also include their own aryacore-lib dependency.';
     throw new Error(message);
   }
 };
-bitcore.versionGuard(global._bitcore);
-global._bitcore = bitcore.version;
+ayacore.versionGuard(global._ayacore);
+global._ayacore = ayacore.version;
 
 // crypto
-bitcore.crypto = {};
-bitcore.crypto.BN = require('./lib/crypto/bn');
-bitcore.crypto.ECDSA = require('./lib/crypto/ecdsa');
-bitcore.crypto.Hash = require('./lib/crypto/hash');
-bitcore.crypto.Random = require('./lib/crypto/random');
-bitcore.crypto.Point = require('./lib/crypto/point');
-bitcore.crypto.Signature = require('./lib/crypto/signature');
+ayacore.crypto = {};
+ayacore.crypto.BN = require('./lib/crypto/bn');
+ayacore.crypto.ECDSA = require('./lib/crypto/ecdsa');
+ayacore.crypto.Hash = require('./lib/crypto/hash');
+ayacore.crypto.Random = require('./lib/crypto/random');
+ayacore.crypto.Point = require('./lib/crypto/point');
+ayacore.crypto.Signature = require('./lib/crypto/signature');
 
 // encoding
-bitcore.encoding = {};
-bitcore.encoding.Base58 = require('./lib/encoding/base58');
-bitcore.encoding.Base58Check = require('./lib/encoding/base58check');
-bitcore.encoding.BufferReader = require('./lib/encoding/bufferreader');
-bitcore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
-bitcore.encoding.Varint = require('./lib/encoding/varint');
+ayacore.encoding = {};
+ayacore.encoding.Base58 = require('./lib/encoding/base58');
+ayacore.encoding.Base58Check = require('./lib/encoding/base58check');
+ayacore.encoding.BufferReader = require('./lib/encoding/bufferreader');
+ayacore.encoding.BufferWriter = require('./lib/encoding/bufferwriter');
+ayacore.encoding.Varint = require('./lib/encoding/varint');
 
 // utilities
-bitcore.util = {};
-bitcore.util.buffer = require('./lib/util/buffer');
-bitcore.util.js = require('./lib/util/js');
-bitcore.util.preconditions = require('./lib/util/preconditions');
+ayacore.util = {};
+ayacore.util.buffer = require('./lib/util/buffer');
+ayacore.util.js = require('./lib/util/js');
+ayacore.util.preconditions = require('./lib/util/preconditions');
 
 // errors thrown by the library
-bitcore.errors = require('./lib/errors');
+ayacore.errors = require('./lib/errors');
 
 // main bitcoin library
-bitcore.Address = require('./lib/address');
-bitcore.Block = require('./lib/block');
-bitcore.MerkleBlock = require('./lib/block/merkleblock');
-bitcore.BlockHeader = require('./lib/block/blockheader');
-bitcore.HDPrivateKey = require('./lib/hdprivatekey.js');
-bitcore.HDPublicKey = require('./lib/hdpublickey.js');
-bitcore.Networks = require('./lib/networks');
-bitcore.Opcode = require('./lib/opcode');
-bitcore.PrivateKey = require('./lib/privatekey');
-bitcore.PublicKey = require('./lib/publickey');
-bitcore.Script = require('./lib/script');
-bitcore.Transaction = require('./lib/transaction');
-bitcore.URI = require('./lib/uri');
-bitcore.Unit = require('./lib/unit');
+ayacore.Address = require('./lib/address');
+ayacore.Block = require('./lib/block');
+ayacore.MerkleBlock = require('./lib/block/merkleblock');
+ayacore.BlockHeader = require('./lib/block/blockheader');
+ayacore.HDPrivateKey = require('./lib/hdprivatekey.js');
+ayacore.HDPublicKey = require('./lib/hdpublickey.js');
+ayacore.Networks = require('./lib/networks');
+ayacore.Opcode = require('./lib/opcode');
+ayacore.PrivateKey = require('./lib/privatekey');
+ayacore.PublicKey = require('./lib/publickey');
+ayacore.Script = require('./lib/script');
+ayacore.Transaction = require('./lib/transaction');
+ayacore.URI = require('./lib/uri');
+ayacore.Unit = require('./lib/unit');
 
 // dependencies, subject to change
-bitcore.deps = {};
-bitcore.deps.bnjs = require('bn.js');
-bitcore.deps.bs58 = require('bs58');
-bitcore.deps.Buffer = Buffer;
-bitcore.deps.elliptic = require('elliptic');
-bitcore.deps._ = require('lodash');
+ayacore.deps = {};
+ayacore.deps.bnjs = require('bn.js');
+ayacore.deps.bs58 = require('bs58');
+ayacore.deps.Buffer = Buffer;
+ayacore.deps.elliptic = require('elliptic');
+ayacore.deps._ = require('lodash');
 
 // Internal usage, exposed for testing/advanced tweaking
-bitcore.Transaction.sighash = require('./lib/transaction/sighash');
+ayacore.Transaction.sighash = require('./lib/transaction/sighash');

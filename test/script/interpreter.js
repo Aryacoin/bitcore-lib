@@ -2,14 +2,14 @@
 
 var should = require('chai').should();
 var sinon = require('sinon');
-var bitcore = require('../..');
-var Interpreter = bitcore.Script.Interpreter;
-var Transaction = bitcore.Transaction;
-var PrivateKey = bitcore.PrivateKey;
-var Script = bitcore.Script;
-var BN = bitcore.crypto.BN;
-var BufferWriter = bitcore.encoding.BufferWriter;
-var Opcode = bitcore.Opcode;
+var ayacore = require('../..');
+var Interpreter = ayacore.Script.Interpreter;
+var Transaction = ayacore.Transaction;
+var PrivateKey = ayacore.PrivateKey;
+var Script = ayacore.Script;
+var BN = ayacore.crypto.BN;
+var BufferWriter = ayacore.encoding.BufferWriter;
+var Opcode = ayacore.Opcode;
 var _ = require('lodash');
 
 var script_tests = require('../data/bitcoind/script_tests');

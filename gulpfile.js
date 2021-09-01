@@ -1,4 +1,4 @@
 'use strict';
 
-var startGulp = require('bitcore-build');
+var startGulp = require('ayacore-build');
 Object.assign(exports, startGulp('lib'))

@@ -1,4 +1,4 @@
-Aryacoin Bitcore Library
+Aryacoin Ayacore Library
 =======
 
-Aryacoin Bitcore Library for Javascript based application
+Aryacoin Ayacore Library for Javascript based application
