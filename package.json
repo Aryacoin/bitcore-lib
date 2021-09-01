@@ -42,7 +42,7 @@
     "lodash": "=4.17.11"
   },
   "devDependencies": {
-    "ayacore-build": "https://github.com/bitpay/ayacore-build.git#1023e8a99cd42b9241ccafe8e34c52f308c10284",
+    "ayacore-build": "https://github.com/bitpay/bitcore-build.git#1023e8a99cd42b9241ccafe8e34c52f308c10284",
     "brfs": "^2.0.1",
     "chai": "^4.2.0",
     "gulp": "^4.0.0",
