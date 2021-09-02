@@ -28423,7 +28423,7 @@ module.exports={
   "_resolved": "https://registry.npmjs.org/elliptic/-/elliptic-6.4.0.tgz",
   "_shasum": "cac9af8762c85836187003c8dfe193e5e2eae5df",
   "_spec": "elliptic@=6.4.0",
-  "_where": "/Users/ematiu/dev/aryacore-lib",
+  "_where": "/Users/ematiu/dev/ayacore-lib",
   "author": {
     "name": "Fedor Indutny",
     "email": "fedor@indutny.com"
@@ -54331,7 +54331,7 @@ exports.createContext = Script.createContext = function (context) {
 
 },{}],214:[function(require,module,exports){
 module.exports={
-  "name": "aryacore-lib",
+  "name": "ayacore-lib",
   "version": "0.16.0",
   "description": "A pure and powerful JavaScript Bitcoin library.",
   "author": "BitPay <dev@bitpay.com>",
@@ -54360,7 +54360,7 @@ module.exports={
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Aryacoin/aryacore-lib.git"
+    "url": "https://github.com/Aryacoin/ayacore-lib.git"
   },
   "browser": {
     "request": "browser-request"
@@ -54383,7 +54383,7 @@ module.exports={
   "license": "MIT"
 }
 
-},{}],"aryacore-lib":[function(require,module,exports){
+},{}],"ayacore-lib":[function(require,module,exports){
 (function (global,Buffer){
 'use strict';
 
@@ -54393,9 +54393,9 @@ var ayacore = module.exports;
 ayacore.version = 'v' + require('./package.json').version;
 ayacore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of aryacore-lib found. ' +
-      'Please make sure to require aryacore-lib and check that submodules do' +
-      ' not also include their own aryacore-lib dependency.';
+    var message = 'More than one instance of ayacore-lib found. ' +
+      'Please make sure to require ayacore-lib and check that submodules do' +
+      ' not also include their own ayacore-lib dependency.';
     throw new Error(message);
   }
 };

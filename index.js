@@ -6,9 +6,9 @@ var ayacore = module.exports;
 ayacore.version = 'v' + require('./package.json').version;
 ayacore.versionGuard = function(version) {
   if (version !== undefined) {
-    var message = 'More than one instance of aryacore-lib found. ' +
-      'Please make sure to require aryacore-lib and check that submodules do' +
-      ' not also include their own aryacore-lib dependency.';
+    var message = 'More than one instance of ayacore-lib found. ' +
+      'Please make sure to require ayacore-lib and check that submodules do' +
+      ' not also include their own ayacore-lib dependency.';
     throw new Error(message);
   }
 };
